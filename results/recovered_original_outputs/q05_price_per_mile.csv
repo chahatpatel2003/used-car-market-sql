@@ -1,0 +1,16 @@
+listing_id,brand,model,model_year,milage,price,price_per_mile
+45,Hyundai,Santa Fe SE,2005,257700,3550,0.01
+178,Kia,Sportage Nightfall,2005,140000,2000,0.01
+38,BMW,M4 Base,2008,227010,3850,0.02
+9,Mercury,Marauder Base,1999,158000,2500,0.02
+192,Ford,Shelby GT500 Base,2004,143000,3200,0.02
+278,Ford,Expedition Max King Ranch,2007,145000,4200,0.03
+47,Mercedes-Benz,S-Class S 560 4MATIC,2003,142000,4800,0.03
+291,BMW,750 i xDrive,2008,190640,5500,0.03
+144,BMW,535 i,2007,232492,6000,0.03
+76,Nissan,Titan XD S,2011,187883,5500,0.03
+98,Hyundai,Equus Signature,2004,156350,3990,0.03
+180,Honda,Civic Sport,2000,133510,4500,0.03
+129,Ford,F-150 XLT,2004,148800,6500,0.04
+112,Chevrolet,Corvette Stingray w/1LT,2005,131800,5800,0.04
+99,BMW,M3 CS,2009,167300,6250,0.04
