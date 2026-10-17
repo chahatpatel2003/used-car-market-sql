@@ -1,6 +1,19 @@
 # Used Car Market SQL Analysis
 
+[![tests](https://github.com/chahatpatel2003/used-car-market-sql/actions/workflows/tests.yml/badge.svg)](https://github.com/chahatpatel2003/used-car-market-sql/actions/workflows/tests.yml)
+
 A normalized MySQL database that links EPA fuel-economy data with used-car listings, plus 15 analytical queries on price, mileage, fuel type, emissions and listing condition. This was a course project for CSCI 126 at California State University, Fresno, Summer 2025.
+
+## Technical highlights
+
+| Area | What it shows | From |
+|---|---|---|
+| Relational design | Four-table schema in third normal form, with primary and foreign keys linking EPA vehicle specifications to resale listings | 2025 project |
+| Analytical SQL | 15 queries using joins across up to four tables, scalar subqueries, `CASE` bucketing, aggregation and computed ratios | 2025 project |
+| SQL review | Defects in queries 3, 5, 6 and 9 found and corrected, plus a portability fix to query 7; each is demonstrated by a test | Added 2026 |
+| Testing without a server | sqlglot translates the MySQL to DuckDB; 42 pytest tests on synthetic edge-case data; CI on Python 3.11–3.13 with a lint check | Added 2026 |
+
+**Stack:** MySQL, SQL, DuckDB, sqlglot, Python, pytest, Ruff, GitHub Actions.
 
 ## What is original and what is not
 
@@ -148,6 +161,8 @@ python -m pytest                       # 42 tests
 
 The SQL is MySQL. `run_queries.py` uses [sqlglot](https://github.com/tobymao/sqlglot) to translate each statement to DuckDB, so no database server is needed. The queries were tested this way, not on a MySQL server.
 
+`requirements.txt` gives minimum versions. `requirements-lock.txt` pins the exact versions the tests were last run with locally (Python 3.12). The tests have also passed locally on Python 3.13, and GitHub Actions runs them on Python 3.11, 3.12 and 3.13 on every push.
+
 ## Repository structure
 
 ```text
@@ -161,5 +176,8 @@ The SQL is MySQL. `run_queries.py` uses [sqlglot](https://github.com/tobymao/sql
 ├── docs/er_diagram_original.jpg
 ├── run_queries.py
 ├── tests/test_queries.py
+├── .github/workflows/tests.yml   CI: pytest on Python 3.11–3.13, plus Ruff
+├── requirements.txt              minimum versions
+├── requirements-lock.txt         exact versions last tested
 └── PROVENANCE.md
 ```

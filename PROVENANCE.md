@@ -32,5 +32,5 @@ These files are new work. They are not part of the 2025 project.
 
 ## Statements in the report that the recovered material does not support
 
-- **"We utilized joins, aggregates, subqueries, and a view":** no view appears in the recovered SQL.
+- **The report says the analysis used joins, aggregates, subqueries and a view:** no view appears in the recovered SQL.
 - **"Listings with non-clean titles were rare or absent":** the Query 15 output shows they were absent, with 300 of 300 clean.
